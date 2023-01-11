@@ -1,13 +1,13 @@
 /*------------------------------------------------------------+
 |                                                             |
-| Purpose: Controls the entire speech system                  |
-| Desc: Can be used to automate doing multiple speech related | 
-|       things                                                |
-| Run: .\app.o                                              |
+| Purpose: Calculates cepstral coeffcients of all the frames  |
+| Run: .\calc_cepstral.o audio_filename.txt                      |
 |                                                             |
 +------------------------------------------------------------*/
 
-#include<bits/stdc++.h>
+
+#include<iostream>
+#include<fstream>
 
 using namespace std;
 
@@ -15,7 +15,8 @@ using namespace std;
 #define ld long double
 
 
-int32_t main(void){
+
+int main(int argc, char *argv[]){
 
 
 
