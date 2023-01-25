@@ -12,7 +12,7 @@ This file contains all the conventions used throughout the project.
     - Cepstral coeffcients vector for each frame is calculated
     - This file contains cepstral vectors of all the frames of the waveform
 
-3. Frequency of smapling :  16000 hz
+3. Frequency of sampling :  16000 hz
 
 4. Frame size : 320 samples  (a.k.a `N`)(~ 20ms )
 
@@ -31,3 +31,6 @@ This file contains all the conventions used throughout the project.
 9. Algorithm to build the code book:  -- To be filled --
 
 10. Multilevel codebook Algorithm: -- To be filled --  
+
+11. If the input audio is huge the initial segment of the input is considered for processing
+    until the maximum array size is reached
