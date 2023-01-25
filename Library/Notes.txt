@@ -1,5 +1,0 @@
-Feature Exttraction
--------------------
-1. LPC coeffcients
-2. Cepstral coeffcients
-3. Mel freqency cepstral coeffcients

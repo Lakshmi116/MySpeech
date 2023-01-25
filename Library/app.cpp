@@ -7,18 +7,16 @@
 |                                                             |
 +------------------------------------------------------------*/
 
-#include<bits/stdc++.h>
 #include "speech_utilities.h"
 
 using namespace std;
 
-#define ll long long
-#define ld long double
 
 
 int32_t main(void){
 
-
+    ll k = 0;
+    cout<< "Hello world from the app!!\nCan't wait to process some speech signals\n";
 
     return 0;
 }

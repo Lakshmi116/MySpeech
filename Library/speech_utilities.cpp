@@ -1,28 +1,11 @@
-/*------------------------------------------------------------+
-|                                                             |
-| Purpose: Cleans the wave in place                           |
-| Desc: Takes a raw recording and preprocesses it in place    |
-| Run: .\preprocess.o audio_filename.txt                      |
-|                                                             |
-+------------------------------------------------------------*/
+/* speech_utilities.cpp */
 
-// First 150 samples are left to truncate the unsaturation in the begining
 
-#include<iostream>
-#include<fstream>
+#include "speech_utilities.h"
 
 using namespace std;
 
-#define ll long long
-#define ld long double
-
-int INITIAL_SKIP = 150;
-int NORMALIZATION_RANGE = 5000;
-
-int input[32000];
-
-void preprocess(string filename){
-    
+void preprocess(string filename, int* input){  
     // opening the given file
     ifstream file;
     ofstream out_file;
@@ -68,14 +51,9 @@ void preprocess(string filename){
     return;
 }
 
-int main(int argc, char *argv[]){
 
-    // iterating through all the arguments given
-    // preprocess all the file names given as the argument
-    for(int i=1;i<argc;i++){
-        string input_filename = argv[1];
-        preprocess(input_filename);
-    }
+// int main(void){
 
-    return 0;
-}
+
+//     cout<< "Hello world !! let me pre process a speech signal\n\n";
+// }
