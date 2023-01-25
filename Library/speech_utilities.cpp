@@ -1,11 +1,22 @@
 /* speech_utilities.cpp */
 
 
+/*
+
+ TO DO 
+1. restrict the input size usign an if statement
+
+
+*/
+
+
 #include "speech_utilities.h"
 
 using namespace std;
 
-void preprocess(string filename, int* input){  
+// IO utilities
+
+int preprocess(string filename, int* input){  
     // opening the given file
     ifstream file;
     ofstream out_file;
@@ -48,12 +59,32 @@ void preprocess(string filename, int* input){
 
         out_file << new_val << "\n";
     }
-    return;
+    return input_size;
 }
 
+int loadInput(string filename, int* input){
+    ifstream file;
+    file.open(filename);
 
-// int main(void){
+    if(!file){
+        cout<< "File: "<<filename << " does not exist in the current folder"<<endl;
+        return;
+    }
+
+    int input_size = 0, val = 0;
+    while(file >> val){
+        input[input_size++] = val;
+    }
+    file.close();
+    return input_size;
+}
+
+// Signal processing utilities ex: hamming window etc
 
 
-//     cout<< "Hello world !! let me pre process a speech signal\n\n";
-// }
+
+// LPC utilities ex: calculate lpc features of a given frame
+
+
+ 
+// Cepstra Utilities ex: calculate cepstral features of a given frame
