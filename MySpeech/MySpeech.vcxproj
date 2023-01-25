@@ -128,6 +128,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="MySpeech.cpp" />
+    <ClCompile Include="SpeechFeatures.cpp" />
+    <ClCompile Include="SpeechHMM.cpp" />
+    <ClCompile Include="SpeechPP.cpp" />
+    <ClCompile Include="SpeechIO.cpp" />
+    <ClCompile Include="SpeechVQ.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MySpeech.h" />
+    <ClInclude Include="SpeechFeatures.h" />
+    <ClInclude Include="SpeechHMM.h" />
+    <ClInclude Include="SpeechPP.h" />
+    <ClInclude Include="SpeechIO.h" />
+    <ClInclude Include="SpeechVQ.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

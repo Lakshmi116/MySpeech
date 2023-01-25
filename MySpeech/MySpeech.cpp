@@ -1,15 +1,56 @@
 // MySpeech.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <iostream>
+#include "MySpeech.h"
+#include "SpeechIO.h"
+#include "SpeechPP.h"
+#include "SpeechFeatures.h"
+#include "SpeechVQ.h"
+#include "SpeechHMM.h"
+
+
+using namespace std;
+
+// Global variables
+
+long double wave[ARR_LIMIT];
+long double energy[FRAME_LIMIT];
+long double zcr[FRAME_LIMIT];
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    printf("Hello World!\n");
+    // read - preprocess - output the energy and zcr values from the recording four.txt
+    // open cool edit to verify the output wave
+
+    /*
+    
+    char inp_filename[40] = "four.txt";
+    char out_filename[40] = "pp_four.txt";
+    int wave_len = read_input_txt(inp_filename, wave, energy, zcr);
+    if (wave_len == -1) {
+        printf("Exiting from main");
+        return 0;
+    }
+    write_array_txt(wave, wave_len, out_filename);
+
+    int frame_len = wave_len / FRAME_SIZE;
+
+    */
+
+    cout << "a";
+    /* 
+    
+    printf("Energy: \n");
+    print_array(energy, frame_len);
+    printf("ZCR: \n");
+    print_array(zcr, frame_len); 
+     
+     */
+    return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
 // Tips for Getting Started: 
 //   1. Use the Solution Explorer window to add/manage files
