@@ -1,0 +1,1 @@
+1. Frame blocking N = 320 window size, M = N/3 slide length 
