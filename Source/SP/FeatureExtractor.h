@@ -12,10 +12,11 @@ class FeatureExtractor{
 
 public:
 
+
     void LPCcoefficients(long double* lpc, int p, long double* frame, int frame_size);
     void CepstralCoefficients(long double* cepstral, int p, long double* frame, int frame_size);
     
-    void CepstralFile(std::string input_filename, std::string output_filename, int N, int M);
+    void CepstralFile(std::string input_filename, std::string output_filename, int N, int M, int p);
 
 private:
 
@@ -25,4 +26,5 @@ private:
     void CalculateCorrelations(long double* correlations, long double* frame, int frame_size, int p);
     void LPCtoCepstral(long double* cepstral, long double* lpc, int lpc_size);
     void CepstraltoLPC(long double* lpc, long double *cepstral, int cepstral_size);
+    
 };
