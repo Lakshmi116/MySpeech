@@ -136,3 +136,23 @@ void FeatureExtractor::CepstralFile(std::string input_filename, std::string outp
     out.close();
 
 }
+
+
+void FeatureExtractor::MakeCodebook(std::string universe_filename, std::string codebook_filename){
+    //viterbi algorithm
+    
+
+
+    //k-means algorithm
+
+    //optimal algorithm
+
+}
+
+void FeatureExtractor::MakeUniverse(std::string audio_filenames[], std::string universe_filename){
+
+}
+void FeatureExtractor::MakeUniverse(std::string audio_filename, std::string universe_filename){
+
+}
+    

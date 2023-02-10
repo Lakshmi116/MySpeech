@@ -16,7 +16,12 @@ public:
     void LPCcoefficients(long double* lpc, int p, long double* frame, int frame_size);
     void CepstralCoefficients(long double* cepstral, int p, long double* frame, int frame_size);
     
-    void CepstralFile(std::string input_filename, std::string output_filename, int N, int M, int p);
+    void CepstralFile(std::string recordings_filename, std::string frames_filename, int N, int M, int p);
+
+    void MakeCodebook(std::string universe_filename, std::string codebook_filename);
+
+    void MakeUniverse(std::string audio_filename, std::string universe_filename);
+    void MakeUniverse(std::string audio_filenames[], std::string universe_filename);
 
 private:
 
