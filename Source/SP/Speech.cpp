@@ -1,6 +1,6 @@
 #include "Speech.h"
 
-int Speech::preprocess(int* input, std::string input_filename, std::string output_filename){
+int Speech::PreProcess(int* input, std::string input_filename, std::string output_filename){
     // opening the given file
     std::ifstream file;
     std::ofstream out_file;
@@ -47,45 +47,6 @@ int Speech::preprocess(int* input, std::string input_filename, std::string outpu
     }
     return input_size;
 } // preprocess the input file, fills input array and stores in output_filename: return input size
-
-int Speech::LoadInputInteger(int* input, std::string filename){
-    std::ifstream file;
-    file.open(filename);
-
-    if(!file){
-        std::cout<< "File: "<<filename << " does not exist in the current folder"<<std::endl;
-        return -1;
-    }
-
-    int input_size = 0, val = 0;
-    while(file >> val){
-        input[input_size++] = val;
-    }
-    file.close();
-    return input_size;
-}
-
-int Speech::LoadInputReal(long double* input, std::string filename){
-    std::ifstream file;
-    file.open(filename);
-
-    if(!file){
-        std::cout<<
-                    "File: "<<filename << " does not exist in the current folder"
-        <<std::endl;
-        return -1;
-    }
-
-    int input_size = 0;
-    long double val = 0.0;
-    while(file >> val){
-        input[input_size++] = val;
-    }
-    file.close();
-    return input_size;
-}
-
-
 
 void Speech::ApplyHammingWindow(long double* frame, int frame_size){
     // Applying hamming window to the given array
