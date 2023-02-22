@@ -28,15 +28,17 @@ private:
     long double** xi;
     bool alpha_alloc, beta_alloc, gamma_alloc, delta_alloc, psi_alloc, xi_alloc;
     bool filled; // helper variable to identify if the HMM is filled properly
-    
+    bool reestimation_lock;
     // utility functions
     long double** allocate_memory(int p, int q); // allocates 2D matrix
     long double* allocate_memory(int p); // allocates 1D array
+    void correct_estimation(void);
+    void set_to_default(void); // configure your default states here
 
     // logic functions
     long double forward_procedure(int* observation_seq, int T); // fills alpha table and returns P(O|lambda)
     void backward_procedure(int* observation_seq, int T); // fills beta table
-    int* viterbi_algorithm(int* observation_seq, int T); // returns optimal state sequence
-
+    long double viterbi_algorithm(int* observation_seq, int T, int* buffer); // fills the buffer with optimal state sequence and returs P_star
+    void reestimation_algorithm(int* observation_seq, int T);
 
 };
